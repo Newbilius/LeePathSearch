@@ -139,12 +139,8 @@ namespace LeePathSearchAlgorithm
                     var nextCell = currentPoint.NewDiffPoint(modificationCell);
                     if (IsValidCoordinates(nextCell, width, height)
                         && map[nextCell.X, nextCell.Y] == currentValue - 1
-                        && map[nextCell.X, nextCell.Y] >= 0)
+                        && map[nextCell.X, nextCell.Y] > 0)
                     {
-                        if (map[nextCell.X, nextCell.Y] == 0
-                            && (nextCell.X != start.X || nextCell.Y != start.Y))
-                            continue;
-
                         path.Push(nextCell);
                         pathQueue.Enqueue(nextCell);
                         break;
