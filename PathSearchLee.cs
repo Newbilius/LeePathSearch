@@ -87,7 +87,7 @@ namespace LeePathSearchAlgorithm
                         }
                         pathQueue.Enqueue(nextCell);
 
-                        //расскомментируйте для иллюстрации процесса
+                        //раскомментируйте для иллюстрации процесса
                         //DebugHelpers.PrintToConsole2DArray(pathMap);
                         //Console.WriteLine();
                     }
@@ -97,7 +97,7 @@ namespace LeePathSearchAlgorithm
             if (pathMap[end.X, end.Y] == 0)
                 return new Point[0];
 
-            //расскомментируйте для иллюстрации процесса
+            //раскомментируйте для иллюстрации процесса
             //DebugHelpers.PrintToConsole2DArray(pathMap);
 
             return GatherPath(pathMap, start, end);
